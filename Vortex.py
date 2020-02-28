@@ -95,8 +95,8 @@ class Vortex():
             x0, y0 = self.center
             x1, y1 = vor.center
             distance = [x1-x0,y1-y0, 0]
-            vorticity = [0,0,self.fac]
-            self.velocity_CM = np.cross(vorticity,distance)
+            vorticity = [0,0,vor.fac]
+            self.velocity_CM = np.cross(distance,vorticity)
             self.center = (x0+self.velocity_CM[0]*dt, y0+self.velocity_CM[1]*dt)
         self.place_vortex_on_grid()
 

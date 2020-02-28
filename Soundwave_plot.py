@@ -19,7 +19,7 @@ from Hydro_solver import HydroSolver
 #Initialize the insistance of the class  
 fluid = HydroSolver(200)
 #Apply the initial condition. Change the parameter to cahnge initial amplitude. 
-fluid.Gaussian_ic(4)
+fluid.Gaussian_ic(0.1)
 
 #Creates figure and 
 fig, ax = plt.subplots(1,2)
