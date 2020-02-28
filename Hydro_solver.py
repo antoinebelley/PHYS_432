@@ -128,30 +128,3 @@ class HydroSolver():
         self.J2 = self.J(self.f2) + self.dt/self.dx*(self.f1[2:]-self.f1[:-2])
         self.f2[1:-1] -= self.J2*self.dt/self.dx
         self.boundary_condition()
-
-
-
-
-# #Initialize the insistance of the class  
-# fluid = HydroSolver(200)
-# #Apply the initial condition
-# fluid.Gaussian_ic(4)
-
-# #Set up the plotting figure
-# plt.ion()
-# fig, ax = plt.subplots(1,2)
-# ax[0].set_xlim(-10,210)
-# ax[1].set_xlim(-10,210)
-# ax[0].set_title('Density of the fluid')
-# ax[1].set_title('Velocity of the fluid')
-# ax[0].set_ylim(0,5)
-# ax[1].set_ylim(-5,5)
-# ax0,= ax[0].plot(fluid.x,fluid.f1)
-# ax1, = ax[1].plot(fluid.x,fluid.f2/fluid.f1)
-
-# #Loop to update the sound wave
-# for i in range(3000):
-#         fluid.update()
-#         ax0.set_data(fluid.x,fluid.f1)
-#         ax1.set_data(fluid.x,fluid.f2/fluid.f1)
-#         plt.pause(1e-3)
