@@ -25,5 +25,6 @@ As shown below we can see that for an initial amplitude of 4 for the Gaussian we
   * [Leap_froging_rings_plot.py](https://github.com/antoinebelley/PHYS_432/blob/master/Leapfroging_ring_plot.py): Plots the cross-section of two smokes ring "Leapfrogging".
   
 **Results**:
-Results are showed below:
+Results are showed below. Note that the scaling of the arrow is controlled by the quiver function, which causes the giant arrows and controlling this is quite messy so I decided no to...
+
 ![Fujiwhara.gif](https://github.com/antoinebelley/PHYS_432/blob/master/Fujiwhara.gif), ![Paddle.gif](https://github.com/antoinebelley/PHYS_432/blob/master/Paddle.gif) and ![Leap_froging_rings_plot.gif](https://github.com/antoinebelley/PHYS_432/blob/master/Leap_froging_rings.gif).
