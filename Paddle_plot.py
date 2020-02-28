@@ -45,7 +45,7 @@ center_2, = ax.plot(v2.center[0],v2.center[1],"bo")
 def gen():
     global center_1
     i = 0
-    while v2.center[1]> 0:
+    while v2.center[1]< 10:
         i += 1
         yield i
 
@@ -64,7 +64,7 @@ def animate(i,quiver, X, Y):
 
 
 #Animate the plot
-anim = animation.FuncAnimation(fig, animate,frames=150, fargs=(vortices, grid[0], grid[1]),
+anim = animation.FuncAnimation(fig, animate,frames=gen, fargs=(vortices, grid[0], grid[1]),
                                interval=50, blit=False, repeat=False)
 fig.tight_layout()
 plt.show()

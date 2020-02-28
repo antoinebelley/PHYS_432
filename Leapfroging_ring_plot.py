@@ -21,10 +21,10 @@ y = np.linspace(0,200, 100)
 grid = np.meshgrid(x, y)
 
 #Initiate the vortices and computes the total velocity field as t=0
-v1 = Vortex(0.001, 100, grid, center=(1,80),velocity_CM=[3.0,0,0])
-v3 = Vortex(0.001, 100, grid, center=(1,110),velocity_CM=[3.0,0,0], vorticity="down")
-v2 = Vortex(0.001, 100, grid, center =(10,80))
-v4 = Vortex(0.001, 100, grid, center =(10,110), vorticity="down")
+v1 = Vortex(0.001, 100, grid, center=(1,80),velocity_CM=[3.0,0,0], vorticity="down")
+v3 = Vortex(0.001, 100, grid, center=(1,110),velocity_CM=[3.0,0,0], vorticity="up")
+v2 = Vortex(0.001, 100, grid, center =(10,80),vorticity="down")
+v4 = Vortex(0.001, 100, grid, center =(10,110), vorticity="up")
 velocity_x = v1.velocity_phi[0]+v2.velocity_phi[0]+v3.velocity_phi[0]+v4.velocity_phi[0]
 velocity_y = v1.velocity_phi[1]+v2.velocity_phi[1]+v3.velocity_phi[1]+v4.velocity_phi[1]
 
@@ -71,9 +71,9 @@ def animate(i,quiver, X, Y):
 
 
 #Animate the plot
-anim = animation.FuncAnimation(fig, animate,frames=300, fargs=(vortices, grid[0], grid[1]),
+anim = animation.FuncAnimation(fig, animate,frames=gen, fargs=(vortices, grid[0], grid[1]),
                                interval=50, blit=False, repeat=False)
 fig.tight_layout()
-#plt.show()
+plt.show()
 #Used to save the gif (Needs imagemagick installed)
-anim.save('Leap_froging_rings.gif', writer='imagemagick')
+#anim.save('Leap_froging_rings.gif', writer='imagemagick')
