@@ -129,41 +129,4 @@ def velocity(r,R,u,k,X,Y,center):
         u[1][i] = u_i*np.cos(phi)
     u[0][:]= u[0][:]/np.max(u[0][:])
     u[1][:]= u[1][:]/np.max(u[1][:])
-    return u        
-
-
-# x = np.linspace(0,1000, 100)
-# y = np.linspace(0,1000, 100)
-
-# grid = np.meshgrid(x, y)
-
-# v1 = Vortex(0.001, 100, grid, center=(1,470),velocity_CM=[3.0,0,0])
-# v3 = Vortex(0.001, 100, grid, center=(1,530),velocity_CM=[3.0,0,0], vorticity="down")
-# v2 = Vortex(0.001, 100, grid, center =(10,470))
-# v4 = Vortex(0.001, 100, grid, center =(10,530), vorticity="down")
-
-# plt.ion()
-# plt.show()
-
-# for i in range(500):
-#     v1.update([v2,v3,v4])
-#     v2.update([v1,v3,v4])
-#     v3.update([v1,v2,v4])
-#     v4.update([v1,v2,v3])
-#     velocity_x = v1.velocity_phi[0]+v2.velocity_phi[0]+v3.velocity_phi[0]+v4.velocity_phi[0]
-#     velocity_y = v1.velocity_phi[1]+v2.velocity_phi[1]+v3.velocity_phi[1]+v4.velocity_phi[1]
-#     plt.quiver(grid[0][::1], grid[1][::1], velocity_x[::1], velocity_y[::1])
-#     plt.plot(v1.center[0],v1.center[1],"ro")
-#     plt.plot(v2.center[0],v2.center[1],"bo")
-#     plt.plot(v3.center[0],v3.center[1],"ro")
-#     plt.plot(v4.center[0],v4.center[1],"bo")
-#     plt.ylim(400,600)
-#     plt.pause(1e-3)
-#     plt.clf()
-    
-
-
-
-
-
-
+    return u
